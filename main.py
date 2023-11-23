@@ -23,7 +23,13 @@ def parse_rss_with_lxml(url):
 def main():
     # Lista de URLs de páginas HTML
     html_urls = ["https://uol.com.br",
-                 "https://terra.com.br/"
+                 "https://terra.com.br/",
+                 "https://www.bbc.com/portuguese",
+                 "https://www.jn.pt/",
+                 "https://sicnoticias.pt/",
+                 "https://cnnportugal.iol.pt/",
+                 "https://www.dn.pt/",
+                 "https://www.sapo.pt/"
                 ]
     
     # Loop para processar cada URL HTML
