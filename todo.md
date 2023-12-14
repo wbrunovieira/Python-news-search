@@ -1,8 +1,7 @@
 # Configurar o WebDriver
 driver = webdriver.Chrome('/caminho/para/chromedriver')  # Substitua pelo caminho correto do seu WebDriver
 
-# Visitar o site
-driver.get('URL_DO_SITE_DE_NOTÍCIAS')  # Substitua pela URL do site de notícias
+
 
 # Extraia as informações necessárias
 # Exemplo: titulo = driver.find_element_by_id('id_do_elemento').text

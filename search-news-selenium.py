@@ -3,18 +3,15 @@ from selenium import webdriver
 from string import Template
 
 # Configurar o WebDriver
-driver = webdriver.Chrome('/caminho/para/chromedriver')  # Substitua pelo caminho correto do seu WebDriver
+driver = webdriver.Chrome()
 
 # Visitar o site
-driver.get('https://www.sapo.pt/noticias/tecnologia')  # Substitua pela URL do site de notícias
+driver.get('https://www.sapo.pt/noticias/tecnologia') 
 
-# Extraia as informações necessárias
-# Exemplo: titulo = driver.find_element_by_id('id_do_elemento').text
 
-# Fechar o navegador
 driver.quit()
 
-# Crie seu template HTML
+#  template HTML
 template_html = """
 <html>
 <head><title>Minhas Notícias</title></head>
