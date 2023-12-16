@@ -39,8 +39,15 @@ for article in articles:
         # Usando '.title > a > span' baseado na estrutura HTML fornecida
         titulo = article.find_element(By.CSS_SELECTOR, '.title > a > span').text
         link = article.find_element(By.CSS_SELECTOR, '.title > a').get_attribute('href')
-        noticias_formatadas += f"<div><p>Título da Notícia: {titulo}</p><p>Link: <a href='{link}'>{link}</a></p></div>"
-        print(f"Artigo processado: {titulo}")
+        imagem_srcset = article.find_element(By.CSS_SELECTOR, 'picture')
+        imagem_url = imagem_srcset.find_element(By.TAG_NAME, 'source').get_attribute('srcset') # Isso pega a primeira URL
+        
+        noticias_formatadas += f"<div><p>Título da Notícia: {titulo}</p><p>Link: <a href='{link}'>{link}</a></p><img src='{imagem_url}' alt='Imagem da Notícia'></div>"
+        
+        print(f"Artigo processado: título {titulo} \nlink: {link} \nimagesrset: {imagem_srcset} \nimagem url: {imagem_url}")
+        print("----------------------------------------------------------------------")
+        print("")
+        
     except Exception as e:
         print("Erro ao processar um artigo: ", e)
 
